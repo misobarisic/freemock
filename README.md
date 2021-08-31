@@ -54,7 +54,7 @@ Passing additional parameters is also supported. Just make sure to append them t
 
 ## Deploy your own
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/misobarisic/mockrest/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/misobarisic/freemock/)
 
 ## Author
 
@@ -70,4 +70,4 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/misobarisic/mockrest/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/misobarisic/mockrest/blob/master/LICENSE) licensed.
