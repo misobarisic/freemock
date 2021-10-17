@@ -7,7 +7,7 @@ request rate limiter is not present.
 
 ## Usage
 
-Send a HTTP GET request to `https://mockapi.misobarisic.com/mock`
+Send a HTTP PUT/POST/DELETE/PATCH request to `https://mockapi.misobarisic.com/mock`
 with the body containing your custom mock object:
 
 ```json
