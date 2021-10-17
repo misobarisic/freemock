@@ -16,6 +16,7 @@ export default function handler(req, res) {
 
 function decode(input) {
   const output = {}
+  const cRegex = /(\d+)c/;
   const dRegex = /(\d+)d/;
 
   for (let key in input) {
@@ -34,6 +35,10 @@ function decode(input) {
         data = getRandomFloat(decimals)
       } else if (data.startsWith("date")) {
         data = new Date()
+      } else if (data.startsWith("string") || data.startsWith("str")) {
+        let characters = data.match(cRegex)
+        characters = characters && characters[1] > 0 ? characters[1] : 8
+        data = generateString(characters)
       }
     } else {
       data = decode(data)
@@ -47,3 +52,12 @@ function decode(input) {
 const getRandomInt = digits => Math.round(Math.random() * Math.round(Math.random() * Math.pow(10, digits)));
 const getRandomFloat = decimals => Number(Math.random().toFixed(decimals))
 const getRandomBool = () => Math.random() > 0.5
+const generateString = length => {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}

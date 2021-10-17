@@ -39,6 +39,7 @@ with the body containing your custom mock object:
 - date -> returns current date
 - float / fl -> returns a floating point number
 - integer / int
+- string / str
 
 ## Options
 
@@ -51,6 +52,9 @@ Passing additional parameters is also supported. Just make sure to append them t
 ### Integer
 
 - d -> defines the max amount of digits a number can have -> "int 3d"
+
+### String
+- c -> defines the length of the string -> "string 5c"
 
 ## Deploy your own
 
